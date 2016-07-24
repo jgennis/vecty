@@ -15,6 +15,25 @@ type Markup interface {
 	Apply(element *Element)
 }
 
+type attribute struct {
+	Name  string
+	Value string
+}
+
+func (a *attribute) Apply(element *Element) {
+	if element.Attributes == nil {
+		element.Attributes = make(map[string]string)
+	}
+	if _, ok := element.Attributes[a.Name]; ok {
+		panic(fmt.Sprintf("duplicate attribute: %s", a.Name))
+	}
+	element.Attributes[a.Name] = a.Value
+}
+
+func Attribute(name, value string) Markup {
+	return &attribute{Name: name, Value: value}
+}
+
 type property struct {
 	Name  string
 	Value interface{}

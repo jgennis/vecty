@@ -66,6 +66,8 @@ func Text(text string) Component {
 // Element is a Component which virtually represents a DOM element.
 type Element struct {
 	TagName        string
+	Namespace      string
+	Attributes     map[string]string
 	Properties     map[string]interface{}
 	Style          map[string]interface{}
 	Dataset        map[string]string
@@ -100,6 +102,17 @@ func (e *Element) Reconcile(oldComp Component) {
 
 	if oldElement, ok := oldComp.(*Element); ok && oldElement.TagName == e.TagName {
 		e.node = oldElement.node
+		for name, value := range e.Attributes {
+			oldValue := oldElement.Attributes[name]
+			if value != oldValue {
+				e.node.Call("setAttribute", name, value)
+			}
+		}
+		for name := range oldElement.Attributes {
+			if _, ok := e.Attributes[name]; !ok {
+				e.node.Call("removeAttribute", name)
+			}
+		}
 		for name, value := range e.Properties {
 			var oldValue interface{}
 			switch name {
@@ -154,7 +167,11 @@ func (e *Element) Reconcile(oldComp Component) {
 		return
 	}
 
-	e.node = js.Global.Get("document").Call("createElement", e.TagName)
+	if e.Namespace != "" {
+		e.node = js.Global.Get("document").Call("createElementNS", e.Namespace, e.TagName)
+	} else {
+		e.node = js.Global.Get("document").Call("createElement", e.TagName)
+	}
 	for name, value := range e.Properties {
 		e.node.Set(name, value)
 	}

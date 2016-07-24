@@ -137,7 +137,7 @@ func writeElem(w io.Writer, name, desc, link string) {
 //
 // https://developer.mozilla.org%s
 func %s(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "%s"}
+	e := &vecty.Element{TagName: "%s", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }

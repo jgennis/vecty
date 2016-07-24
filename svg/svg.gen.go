@@ -13,7 +13,7 @@ import "github.com/gopherjs/vecty"
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/a
 func Anchor(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "a"}
+	e := &vecty.Element{TagName: "a", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -23,7 +23,7 @@ func Anchor(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/altGlyph
 func AlternateGlyph(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "altGlyph"}
+	e := &vecty.Element{TagName: "altGlyph", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -32,7 +32,7 @@ func AlternateGlyph(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/altGlyphDef
 func AlternateGlyphDefinition(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "altGlyphDef"}
+	e := &vecty.Element{TagName: "altGlyphDef", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -42,7 +42,7 @@ func AlternateGlyphDefinition(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/altGlyphItem
 func AlternateGlyphItem(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "altGlyphItem"}
+	e := &vecty.Element{TagName: "altGlyphItem", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -53,7 +53,7 @@ func AlternateGlyphItem(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate
 func Animate(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "animate"}
+	e := &vecty.Element{TagName: "animate", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -62,7 +62,7 @@ func Animate(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateColor
 func AnimateColor(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "animateColor"}
+	e := &vecty.Element{TagName: "animateColor", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -72,7 +72,7 @@ func AnimateColor(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateMotion
 func AnimateMotion(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "animateMotion"}
+	e := &vecty.Element{TagName: "animateMotion", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -83,7 +83,7 @@ func AnimateMotion(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform
 func AnimateTransform(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "animateTransform"}
+	e := &vecty.Element{TagName: "animateTransform", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -93,7 +93,7 @@ func AnimateTransform(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
 func Circle(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "circle"}
+	e := &vecty.Element{TagName: "circle", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -104,7 +104,7 @@ func Circle(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath
 func ClipPath(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "clipPath"}
+	e := &vecty.Element{TagName: "clipPath", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -113,7 +113,7 @@ func ClipPath(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/color-profile
 func ColorProfile(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "color-profile"}
+	e := &vecty.Element{TagName: "color-profile", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -126,7 +126,7 @@ func ColorProfile(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/cursor
 func Cursor(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "cursor"}
+	e := &vecty.Element{TagName: "cursor", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -141,7 +141,7 @@ func Cursor(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs
 func Definitions(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "defs"}
+	e := &vecty.Element{TagName: "defs", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -156,7 +156,7 @@ func Definitions(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/desc
 func Description(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "desc"}
+	e := &vecty.Element{TagName: "desc", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -166,7 +166,7 @@ func Description(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
 func Ellipse(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "ellipse"}
+	e := &vecty.Element{TagName: "ellipse", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -177,7 +177,7 @@ func Ellipse(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feBlend
 func FilterEffectBlend(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feBlend"}
+	e := &vecty.Element{TagName: "feBlend", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -188,7 +188,7 @@ func FilterEffectBlend(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix
 func FilterEffectColorMatrix(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feColorMatrix"}
+	e := &vecty.Element{TagName: "feColorMatrix", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -199,7 +199,7 @@ func FilterEffectColorMatrix(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer
 func FilterEffectComponentTransfer(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feComponentTransfer"}
+	e := &vecty.Element{TagName: "feComponentTransfer", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -212,7 +212,7 @@ func FilterEffectComponentTransfer(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComposite
 func FilterEffectComposite(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feComposite"}
+	e := &vecty.Element{TagName: "feComposite", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -225,7 +225,7 @@ func FilterEffectComposite(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feConvolveMatrix
 func FeConvolveMatrix(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feConvolveMatrix"}
+	e := &vecty.Element{TagName: "feConvolveMatrix", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -236,7 +236,7 @@ func FeConvolveMatrix(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feDiffuseLighting
 func FeDiffuseLighting(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feDiffuseLighting"}
+	e := &vecty.Element{TagName: "feDiffuseLighting", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -246,7 +246,7 @@ func FeDiffuseLighting(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feDisplacementMap
 func FilterEffectDisplacementMap(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feDisplacementMap"}
+	e := &vecty.Element{TagName: "feDisplacementMap", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -256,7 +256,7 @@ func FilterEffectDisplacementMap(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feDistantLight
 func FilterEffectDistantLight(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feDistantLight"}
+	e := &vecty.Element{TagName: "feDistantLight", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -266,7 +266,7 @@ func FilterEffectDistantLight(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFlood
 func FilterEffectFlood(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feFlood"}
+	e := &vecty.Element{TagName: "feFlood", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -276,7 +276,7 @@ func FilterEffectFlood(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFuncA
 func FilterEffectFunctionA(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feFuncA"}
+	e := &vecty.Element{TagName: "feFuncA", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -286,7 +286,7 @@ func FilterEffectFunctionA(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFuncB
 func FilterEffectFunctionB(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feFuncB"}
+	e := &vecty.Element{TagName: "feFuncB", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -296,7 +296,7 @@ func FilterEffectFunctionB(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFuncG
 func FeFuncG(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feFuncG"}
+	e := &vecty.Element{TagName: "feFuncG", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -306,7 +306,7 @@ func FeFuncG(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFuncR
 func FeFuncR(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feFuncR"}
+	e := &vecty.Element{TagName: "feFuncR", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -316,7 +316,7 @@ func FeFuncR(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur
 func FilterEffectGaussianBlur(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feGaussianBlur"}
+	e := &vecty.Element{TagName: "feGaussianBlur", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -327,7 +327,7 @@ func FilterEffectGaussianBlur(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feImage
 func FilterEffectImage(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feImage"}
+	e := &vecty.Element{TagName: "feImage", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -338,7 +338,7 @@ func FilterEffectImage(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMerge
 func FilterEffectMerge(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feMerge"}
+	e := &vecty.Element{TagName: "feMerge", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -348,7 +348,7 @@ func FilterEffectMerge(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMergeNode
 func FilterEffectMergeNode(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feMergeNode"}
+	e := &vecty.Element{TagName: "feMergeNode", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -358,7 +358,7 @@ func FilterEffectMergeNode(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMorphology
 func FilterEffectMorphology(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feMorphology"}
+	e := &vecty.Element{TagName: "feMorphology", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -368,7 +368,7 @@ func FilterEffectMorphology(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feOffset
 func FilterEffectOffset(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feOffset"}
+	e := &vecty.Element{TagName: "feOffset", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -377,7 +377,7 @@ func FilterEffectOffset(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/fePointLight
 func FilterEffectPointLight(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "fePointLight"}
+	e := &vecty.Element{TagName: "fePointLight", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -392,7 +392,7 @@ func FilterEffectPointLight(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feSpecularLighting
 func FilterEffectSpecularLighting(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feSpecularLighting"}
+	e := &vecty.Element{TagName: "feSpecularLighting", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -402,7 +402,7 @@ func FilterEffectSpecularLighting(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feSpotLight
 func FeSpotLight(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feSpotLight"}
+	e := &vecty.Element{TagName: "feSpotLight", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -412,7 +412,7 @@ func FeSpotLight(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTile
 func FilterEffectTile(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feTile"}
+	e := &vecty.Element{TagName: "feTile", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -422,7 +422,7 @@ func FilterEffectTile(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence
 func FilterEffectTurbulence(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "feTurbulence"}
+	e := &vecty.Element{TagName: "feTurbulence", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -433,7 +433,7 @@ func FilterEffectTurbulence(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter
 func Filter(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "filter"}
+	e := &vecty.Element{TagName: "filter", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -442,7 +442,7 @@ func Filter(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font
 func Font(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font"}
+	e := &vecty.Element{TagName: "font", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -452,7 +452,7 @@ func Font(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font-face
 func FontFace(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font-face"}
+	e := &vecty.Element{TagName: "font-face", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -462,7 +462,7 @@ func FontFace(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font-face-format
 func FontFaceFormat(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font-face-format"}
+	e := &vecty.Element{TagName: "font-face-format", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -472,7 +472,7 @@ func FontFaceFormat(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font-face-name
 func FontFaceName(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font-face-name"}
+	e := &vecty.Element{TagName: "font-face-name", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -484,7 +484,7 @@ func FontFaceName(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font-face-src
 func FontFaceSource(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font-face-src"}
+	e := &vecty.Element{TagName: "font-face-src", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -493,7 +493,7 @@ func FontFaceSource(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font-face-uri
 func FontFaceURI(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "font-face-uri"}
+	e := &vecty.Element{TagName: "font-face-uri", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -505,7 +505,7 @@ func FontFaceURI(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject
 func ForeignObject(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "foreignObject"}
+	e := &vecty.Element{TagName: "foreignObject", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -517,7 +517,7 @@ func ForeignObject(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g
 func Group(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "g"}
+	e := &vecty.Element{TagName: "g", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -526,7 +526,7 @@ func Group(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/glyph
 func Glyph(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "glyph"}
+	e := &vecty.Element{TagName: "glyph", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -536,7 +536,7 @@ func Glyph(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/glyphRef
 func GlyphReference(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "glyphRef"}
+	e := &vecty.Element{TagName: "glyphRef", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -546,7 +546,7 @@ func GlyphReference(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/hkern
 func HorizontalKern(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "hkern"}
+	e := &vecty.Element{TagName: "hkern", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -556,7 +556,7 @@ func HorizontalKern(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image
 func Image(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "image"}
+	e := &vecty.Element{TagName: "image", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -566,7 +566,7 @@ func Image(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line
 func Line(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "line"}
+	e := &vecty.Element{TagName: "line", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -576,7 +576,7 @@ func Line(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
 func LinearGradient(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "linearGradient"}
+	e := &vecty.Element{TagName: "linearGradient", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -587,7 +587,7 @@ func LinearGradient(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker
 func Marker(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "marker"}
+	e := &vecty.Element{TagName: "marker", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -599,7 +599,7 @@ func Marker(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mask
 func Mask(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "mask"}
+	e := &vecty.Element{TagName: "mask", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -611,7 +611,7 @@ func Mask(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/metadata
 func Metadata(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "metadata"}
+	e := &vecty.Element{TagName: "metadata", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -621,7 +621,7 @@ func Metadata(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/missing-glyph
 func MissingGlyph(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "missing-glyph"}
+	e := &vecty.Element{TagName: "missing-glyph", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -631,7 +631,7 @@ func MissingGlyph(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mpath
 func MotionPath(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "mpath"}
+	e := &vecty.Element{TagName: "mpath", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -641,7 +641,7 @@ func MotionPath(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path
 func Path(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "path"}
+	e := &vecty.Element{TagName: "path", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -655,7 +655,7 @@ func Path(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/pattern
 func Pattern(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "pattern"}
+	e := &vecty.Element{TagName: "pattern", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -666,7 +666,7 @@ func Pattern(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon
 func Polygon(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "polygon"}
+	e := &vecty.Element{TagName: "polygon", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -678,7 +678,7 @@ func Polygon(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polyline
 func Polyline(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "polyline"}
+	e := &vecty.Element{TagName: "polyline", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -688,7 +688,7 @@ func Polyline(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient
 func RadialGradient(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "radialGradient"}
+	e := &vecty.Element{TagName: "radialGradient", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -699,7 +699,7 @@ func RadialGradient(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
 func Rectangle(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "rect"}
+	e := &vecty.Element{TagName: "rect", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -709,7 +709,7 @@ func Rectangle(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/script
 func Script(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "script"}
+	e := &vecty.Element{TagName: "script", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -722,7 +722,7 @@ func Script(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/set
 func Set(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "set"}
+	e := &vecty.Element{TagName: "set", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -733,7 +733,7 @@ func Set(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/stop
 func Stop(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "stop"}
+	e := &vecty.Element{TagName: "stop", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -744,7 +744,7 @@ func Stop(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/style
 func Style(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "style"}
+	e := &vecty.Element{TagName: "style", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -756,7 +756,7 @@ func Style(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
 func SVG(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "svg"}
+	e := &vecty.Element{TagName: "svg", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -770,7 +770,7 @@ func SVG(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/switch
 func Switch(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "switch"}
+	e := &vecty.Element{TagName: "switch", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -785,7 +785,7 @@ func Switch(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/symbol
 func Symbol(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "symbol"}
+	e := &vecty.Element{TagName: "symbol", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -796,7 +796,7 @@ func Symbol(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text
 func Text(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "text"}
+	e := &vecty.Element{TagName: "text", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -809,7 +809,7 @@ func Text(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath
 func TextPath(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "textPath"}
+	e := &vecty.Element{TagName: "textPath", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -825,7 +825,7 @@ func TextPath(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/title
 func Title(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "title"}
+	e := &vecty.Element{TagName: "title", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -836,7 +836,7 @@ func Title(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tref
 func TextReference(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "tref"}
+	e := &vecty.Element{TagName: "tref", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -847,7 +847,7 @@ func TextReference(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/tspan
 func TextSpan(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "tspan"}
+	e := &vecty.Element{TagName: "tspan", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -862,7 +862,7 @@ func TextSpan(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use
 func Use(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "use"}
+	e := &vecty.Element{TagName: "use", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -872,7 +872,7 @@ func Use(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/view
 func View(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "view"}
+	e := &vecty.Element{TagName: "view", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
@@ -882,7 +882,7 @@ func View(markup ...vecty.Markup) *vecty.Element {
 //
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Element/vkern
 func VerticalKern(markup ...vecty.Markup) *vecty.Element {
-	e := &vecty.Element{TagName: "vkern"}
+	e := &vecty.Element{TagName: "vkern", Namespace: "http://www.w3.org/2000/svg"}
 	vecty.List(markup).Apply(e)
 	return e
 }
