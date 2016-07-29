@@ -89,18 +89,27 @@ func (e *Element) Apply(element *Element) {
 // Reconcile implements the Component interface.
 func (e *Element) Reconcile(oldComp Component) {
 	for _, l := range e.EventListeners {
-		l.wrapper = func(jsEvent *js.Object) {
-			if l.callPreventDefault {
-				jsEvent.Call("preventDefault")
+		l := l // Don't include the loop iterator in the closure
+		if l.wrapper == nil {
+			l.wrapper = func(jsEvent *js.Object) {
+				if l.callPreventDefault {
+					jsEvent.Call("preventDefault")
+				}
+				if l.callStopPropagation {
+					jsEvent.Call("stopPropagation")
+				}
+				l.Listener(&Event{
+					Event:  jsEvent,
+					Target: jsEvent.Get("target"),
+				})
 			}
-			if l.callStopPropagation {
-				jsEvent.Call("stopPropagation")
-			}
-			l.Listener(&Event{Target: jsEvent.Get("target")})
 		}
 	}
 
-	if oldElement, ok := oldComp.(*Element); ok && oldElement.TagName == e.TagName {
+	if oldElement, ok := oldComp.(*Element); ok &&
+		oldElement.TagName == e.TagName &&
+		oldElement.Namespace == e.Namespace {
+
 		e.node = oldElement.node
 		for name, value := range e.Attributes {
 			oldValue := oldElement.Attributes[name]
@@ -171,6 +180,9 @@ func (e *Element) Reconcile(oldComp Component) {
 		e.node = js.Global.Get("document").Call("createElementNS", e.Namespace, e.TagName)
 	} else {
 		e.node = js.Global.Get("document").Call("createElement", e.TagName)
+	}
+	for name, value := range e.Attributes {
+		e.node.Call("setAttribute", name, value)
 	}
 	for name, value := range e.Properties {
 		e.node.Set(name, value)
